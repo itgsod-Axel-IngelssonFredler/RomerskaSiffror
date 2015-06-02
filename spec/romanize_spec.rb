@@ -23,15 +23,15 @@ describe 'converting arabic numerals to roman' do
   end
 
   it 'should encode single-digit numbers' do
-    romanize(1).should match 'I'
-    romanize(2).should match 'II'
-    romanize(3).should match 'III'
-    romanize(4).should match 'IV'
-    romanize(5).should match 'V'
-    romanize(6).should match 'VI'
-    romanize(7).should match 'VII'
-    romanize(8).should match 'VIII'
-    romanize(9).should match 'IX'
+    expect( romanize(1) ).to match 'I'
+    expect( romanize(2) ).to match 'II'
+    expect( romanize(3) ).to match 'III'
+    expect( romanize(4) ).to match 'IV'
+    expect( romanize(5) ).to match 'V'
+    expect( romanize(6) ).to match 'VI'
+    expect( romanize(7) ).to match 'VII'
+    expect( romanize(8) ).to match 'VIII'
+    expect( romanize(9) ).to match 'IX'
   end
 
   it 'should encode double digit numbers' do
@@ -44,18 +44,18 @@ describe 'converting arabic numerals to roman' do
     romanize(92).should match 'XCII'
   end
 
-  it 'should encode triple digit numbers' do
-    romanize(100).should match 'C'
-    romanize(666).should match 'DCLXVI'
-    romanize(747).should match 'DCCXLVII'
-    romanize(999).should match 'CMXCIX'
-  end
-
-  it 'should encode four digit numbers' do
-    romanize(1000).should match 'M'
-    romanize(1066).should match 'MLXVI'       # Battle of Hastings
-    romanize(1492).should match 'MCDXCII'     # Columbus 'discovers' America
-    romanize(1978).should match 'MCMLXXVIII'  # I am born
-    romanize(2063).should match 'MMLXIII'     # First Contact
-  end
+  # it 'should encode triple digit numbers' do
+  #   romanize(100).should match 'C'
+  #   romanize(666).should match 'DCLXVI'
+  #   romanize(747).should match 'DCCXLVII'
+  #   romanize(999).should match 'CMXCIX'
+  # end
+  #
+  # it 'should encode four digit numbers' do
+  #   romanize(1000).should match 'M'
+  #   romanize(1066).should match 'MLXVI'       # Battle of Hastings
+  #   romanize(1492).should match 'MCDXCII'     # Columbus 'discovers' America
+  #   romanize(1978).should match 'MCMLXXVIII'  # I am born
+  #   romanize(2063).should match 'MMLXIII'     # First Contact
+  # end
 end
